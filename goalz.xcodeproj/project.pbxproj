@@ -1,0 +1,1163 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95D9C2C828206D2200982FD2 /* goalzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2C728206D2200982FD2 /* goalzApp.swift */; };
+		95D9C2CA28206D2200982FD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2C928206D2200982FD2 /* ContentView.swift */; };
+		95D9C2CC28206D2400982FD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D9C2CB28206D2400982FD2 /* Assets.xcassets */; };
+		95D9C2CF28206D2400982FD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D9C2CE28206D2400982FD2 /* Preview Assets.xcassets */; };
+		95D9C2D928206D2400982FD2 /* goalzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2D828206D2400982FD2 /* goalzTests.swift */; };
+		95D9C2E328206D2400982FD2 /* goalzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2E228206D2400982FD2 /* goalzUITests.swift */; };
+		95D9C2E528206D2400982FD2 /* goalzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2E428206D2400982FD2 /* goalzUITestsLaunchTests.swift */; };
+		95D9C2E928206D2400982FD2 /* goalz WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 95D9C2E828206D2400982FD2 /* goalz WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		95D9C2EE28206D2500982FD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D9C2ED28206D2500982FD2 /* Assets.xcassets */; };
+		95D9C2F428206D2500982FD2 /* goalz WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 95D9C2F328206D2500982FD2 /* goalz WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		95D9C2F928206D2500982FD2 /* goalzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2F828206D2500982FD2 /* goalzApp.swift */; };
+		95D9C2FB28206D2500982FD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2FA28206D2500982FD2 /* ContentView.swift */; };
+		95D9C2FD28206D2500982FD2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2FC28206D2500982FD2 /* NotificationController.swift */; };
+		95D9C2FF28206D2500982FD2 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2FE28206D2500982FD2 /* NotificationView.swift */; };
+		95D9C30128206D2500982FD2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C30028206D2500982FD2 /* ComplicationController.swift */; };
+		95D9C30328206D2600982FD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D9C30228206D2600982FD2 /* Assets.xcassets */; };
+		95D9C30628206D2600982FD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D9C30528206D2600982FD2 /* Preview Assets.xcassets */; };
+		95D9C31228206D2600982FD2 /* goalz_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C31128206D2600982FD2 /* goalz_WatchKit_AppTests.swift */; };
+		95D9C31C28206D2600982FD2 /* goalz_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C31B28206D2600982FD2 /* goalz_WatchKit_AppUITests.swift */; };
+		95D9C31E28206D2600982FD2 /* goalz_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C31D28206D2600982FD2 /* goalz_WatchKit_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95D9C2D528206D2400982FD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D9C2BC28206D2200982FD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95D9C2C328206D2200982FD2;
+			remoteInfo = goalz;
+		};
+		95D9C2DF28206D2400982FD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D9C2BC28206D2200982FD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95D9C2C328206D2200982FD2;
+			remoteInfo = goalz;
+		};
+		95D9C2EA28206D2400982FD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D9C2BC28206D2200982FD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95D9C2E728206D2400982FD2;
+			remoteInfo = "goalz WatchKit App";
+		};
+		95D9C2F528206D2500982FD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D9C2BC28206D2200982FD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95D9C2F228206D2500982FD2;
+			remoteInfo = "goalz WatchKit Extension";
+		};
+		95D9C30E28206D2600982FD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D9C2BC28206D2200982FD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95D9C2F228206D2500982FD2;
+			remoteInfo = "goalz WatchKit Extension";
+		};
+		95D9C31828206D2600982FD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D9C2BC28206D2200982FD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95D9C2E728206D2400982FD2;
+			remoteInfo = "goalz WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		95D9C32428206D2600982FD2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				95D9C2F428206D2500982FD2 /* goalz WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C32828206D2600982FD2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				95D9C2E928206D2400982FD2 /* goalz WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		95D9C2C428206D2200982FD2 /* goalz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goalz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C2C728206D2200982FD2 /* goalzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalzApp.swift; sourceTree = "<group>"; };
+		95D9C2C928206D2200982FD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95D9C2CB28206D2400982FD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95D9C2CE28206D2400982FD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		95D9C2D428206D2400982FD2 /* goalzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goalzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C2D828206D2400982FD2 /* goalzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalzTests.swift; sourceTree = "<group>"; };
+		95D9C2DE28206D2400982FD2 /* goalzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goalzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C2E228206D2400982FD2 /* goalzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalzUITests.swift; sourceTree = "<group>"; };
+		95D9C2E428206D2400982FD2 /* goalzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalzUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		95D9C2E828206D2400982FD2 /* goalz WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goalz WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C2ED28206D2500982FD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95D9C2F328206D2500982FD2 /* goalz WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "goalz WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C2F828206D2500982FD2 /* goalzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalzApp.swift; sourceTree = "<group>"; };
+		95D9C2FA28206D2500982FD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95D9C2FC28206D2500982FD2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		95D9C2FE28206D2500982FD2 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		95D9C30028206D2500982FD2 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		95D9C30228206D2600982FD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95D9C30528206D2600982FD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		95D9C30728206D2600982FD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95D9C30828206D2600982FD2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		95D9C30D28206D2600982FD2 /* goalz WatchKit AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "goalz WatchKit AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C31128206D2600982FD2 /* goalz_WatchKit_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalz_WatchKit_AppTests.swift; sourceTree = "<group>"; };
+		95D9C31728206D2600982FD2 /* goalz WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "goalz WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C31B28206D2600982FD2 /* goalz_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalz_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
+		95D9C31D28206D2600982FD2 /* goalz_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalz_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95D9C2C128206D2200982FD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C2D128206D2400982FD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C2DB28206D2400982FD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C2F028206D2500982FD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C30A28206D2600982FD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C31428206D2600982FD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95D9C2BB28206D2200982FD2 = {
+			isa = PBXGroup;
+			children = (
+				95D9C2C628206D2200982FD2 /* goalz */,
+				95D9C2D728206D2400982FD2 /* goalzTests */,
+				95D9C2E128206D2400982FD2 /* goalzUITests */,
+				95D9C2EC28206D2400982FD2 /* goalz WatchKit App */,
+				95D9C2F728206D2500982FD2 /* goalz WatchKit Extension */,
+				95D9C31028206D2600982FD2 /* goalz WatchKit AppTests */,
+				95D9C31A28206D2600982FD2 /* goalz WatchKit AppUITests */,
+				95D9C2C528206D2200982FD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95D9C2C528206D2200982FD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95D9C2C428206D2200982FD2 /* goalz.app */,
+				95D9C2D428206D2400982FD2 /* goalzTests.xctest */,
+				95D9C2DE28206D2400982FD2 /* goalzUITests.xctest */,
+				95D9C2E828206D2400982FD2 /* goalz WatchKit App.app */,
+				95D9C2F328206D2500982FD2 /* goalz WatchKit Extension.appex */,
+				95D9C30D28206D2600982FD2 /* goalz WatchKit AppTests.xctest */,
+				95D9C31728206D2600982FD2 /* goalz WatchKit AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95D9C2C628206D2200982FD2 /* goalz */ = {
+			isa = PBXGroup;
+			children = (
+				95D9C2C728206D2200982FD2 /* goalzApp.swift */,
+				95D9C2C928206D2200982FD2 /* ContentView.swift */,
+				95D9C2CB28206D2400982FD2 /* Assets.xcassets */,
+				95D9C2CD28206D2400982FD2 /* Preview Content */,
+			);
+			path = goalz;
+			sourceTree = "<group>";
+		};
+		95D9C2CD28206D2400982FD2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				95D9C2CE28206D2400982FD2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		95D9C2D728206D2400982FD2 /* goalzTests */ = {
+			isa = PBXGroup;
+			children = (
+				95D9C2D828206D2400982FD2 /* goalzTests.swift */,
+			);
+			path = goalzTests;
+			sourceTree = "<group>";
+		};
+		95D9C2E128206D2400982FD2 /* goalzUITests */ = {
+			isa = PBXGroup;
+			children = (
+				95D9C2E228206D2400982FD2 /* goalzUITests.swift */,
+				95D9C2E428206D2400982FD2 /* goalzUITestsLaunchTests.swift */,
+			);
+			path = goalzUITests;
+			sourceTree = "<group>";
+		};
+		95D9C2EC28206D2400982FD2 /* goalz WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				95D9C2ED28206D2500982FD2 /* Assets.xcassets */,
+			);
+			path = "goalz WatchKit App";
+			sourceTree = "<group>";
+		};
+		95D9C2F728206D2500982FD2 /* goalz WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				95D9C2F828206D2500982FD2 /* goalzApp.swift */,
+				95D9C2FA28206D2500982FD2 /* ContentView.swift */,
+				95D9C2FC28206D2500982FD2 /* NotificationController.swift */,
+				95D9C2FE28206D2500982FD2 /* NotificationView.swift */,
+				95D9C30028206D2500982FD2 /* ComplicationController.swift */,
+				95D9C30228206D2600982FD2 /* Assets.xcassets */,
+				95D9C30728206D2600982FD2 /* Info.plist */,
+				95D9C30828206D2600982FD2 /* PushNotificationPayload.apns */,
+				95D9C30428206D2600982FD2 /* Preview Content */,
+			);
+			path = "goalz WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		95D9C30428206D2600982FD2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				95D9C30528206D2600982FD2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		95D9C31028206D2600982FD2 /* goalz WatchKit AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				95D9C31128206D2600982FD2 /* goalz_WatchKit_AppTests.swift */,
+			);
+			path = "goalz WatchKit AppTests";
+			sourceTree = "<group>";
+		};
+		95D9C31A28206D2600982FD2 /* goalz WatchKit AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				95D9C31B28206D2600982FD2 /* goalz_WatchKit_AppUITests.swift */,
+				95D9C31D28206D2600982FD2 /* goalz_WatchKit_AppUITestsLaunchTests.swift */,
+			);
+			path = "goalz WatchKit AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95D9C2C328206D2200982FD2 /* goalz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D9C32928206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalz" */;
+			buildPhases = (
+				95D9C2C028206D2200982FD2 /* Sources */,
+				95D9C2C128206D2200982FD2 /* Frameworks */,
+				95D9C2C228206D2200982FD2 /* Resources */,
+				95D9C32828206D2600982FD2 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95D9C2EB28206D2400982FD2 /* PBXTargetDependency */,
+			);
+			name = goalz;
+			productName = goalz;
+			productReference = 95D9C2C428206D2200982FD2 /* goalz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95D9C2D328206D2400982FD2 /* goalzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D9C32C28206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalzTests" */;
+			buildPhases = (
+				95D9C2D028206D2400982FD2 /* Sources */,
+				95D9C2D128206D2400982FD2 /* Frameworks */,
+				95D9C2D228206D2400982FD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95D9C2D628206D2400982FD2 /* PBXTargetDependency */,
+			);
+			name = goalzTests;
+			productName = goalzTests;
+			productReference = 95D9C2D428206D2400982FD2 /* goalzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95D9C2DD28206D2400982FD2 /* goalzUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D9C32F28206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalzUITests" */;
+			buildPhases = (
+				95D9C2DA28206D2400982FD2 /* Sources */,
+				95D9C2DB28206D2400982FD2 /* Frameworks */,
+				95D9C2DC28206D2400982FD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95D9C2E028206D2400982FD2 /* PBXTargetDependency */,
+			);
+			name = goalzUITests;
+			productName = goalzUITests;
+			productReference = 95D9C2DE28206D2400982FD2 /* goalzUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		95D9C2E728206D2400982FD2 /* goalz WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D9C32528206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalz WatchKit App" */;
+			buildPhases = (
+				95D9C2E628206D2400982FD2 /* Resources */,
+				95D9C32428206D2600982FD2 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95D9C2F628206D2500982FD2 /* PBXTargetDependency */,
+			);
+			name = "goalz WatchKit App";
+			productName = "goalz WatchKit App";
+			productReference = 95D9C2E828206D2400982FD2 /* goalz WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		95D9C2F228206D2500982FD2 /* goalz WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D9C32128206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalz WatchKit Extension" */;
+			buildPhases = (
+				95D9C2EF28206D2500982FD2 /* Sources */,
+				95D9C2F028206D2500982FD2 /* Frameworks */,
+				95D9C2F128206D2500982FD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "goalz WatchKit Extension";
+			productName = "goalz WatchKit Extension";
+			productReference = 95D9C2F328206D2500982FD2 /* goalz WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		95D9C30C28206D2600982FD2 /* goalz WatchKit AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D9C33228206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalz WatchKit AppTests" */;
+			buildPhases = (
+				95D9C30928206D2600982FD2 /* Sources */,
+				95D9C30A28206D2600982FD2 /* Frameworks */,
+				95D9C30B28206D2600982FD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95D9C30F28206D2600982FD2 /* PBXTargetDependency */,
+			);
+			name = "goalz WatchKit AppTests";
+			productName = "goalz WatchKit AppTests";
+			productReference = 95D9C30D28206D2600982FD2 /* goalz WatchKit AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95D9C31628206D2600982FD2 /* goalz WatchKit AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D9C33528206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalz WatchKit AppUITests" */;
+			buildPhases = (
+				95D9C31328206D2600982FD2 /* Sources */,
+				95D9C31428206D2600982FD2 /* Frameworks */,
+				95D9C31528206D2600982FD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95D9C31928206D2600982FD2 /* PBXTargetDependency */,
+			);
+			name = "goalz WatchKit AppUITests";
+			productName = "goalz WatchKit AppUITests";
+			productReference = 95D9C31728206D2600982FD2 /* goalz WatchKit AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95D9C2BC28206D2200982FD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					95D9C2C328206D2200982FD2 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					95D9C2D328206D2400982FD2 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 95D9C2C328206D2200982FD2;
+					};
+					95D9C2DD28206D2400982FD2 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 95D9C2C328206D2200982FD2;
+					};
+					95D9C2E728206D2400982FD2 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					95D9C2F228206D2500982FD2 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					95D9C30C28206D2600982FD2 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 95D9C2F228206D2500982FD2;
+					};
+					95D9C31628206D2600982FD2 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 95D9C2E728206D2400982FD2;
+					};
+				};
+			};
+			buildConfigurationList = 95D9C2BF28206D2200982FD2 /* Build configuration list for PBXProject "goalz" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95D9C2BB28206D2200982FD2;
+			productRefGroup = 95D9C2C528206D2200982FD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95D9C2C328206D2200982FD2 /* goalz */,
+				95D9C2D328206D2400982FD2 /* goalzTests */,
+				95D9C2DD28206D2400982FD2 /* goalzUITests */,
+				95D9C2E728206D2400982FD2 /* goalz WatchKit App */,
+				95D9C2F228206D2500982FD2 /* goalz WatchKit Extension */,
+				95D9C30C28206D2600982FD2 /* goalz WatchKit AppTests */,
+				95D9C31628206D2600982FD2 /* goalz WatchKit AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95D9C2C228206D2200982FD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D9C2CF28206D2400982FD2 /* Preview Assets.xcassets in Resources */,
+				95D9C2CC28206D2400982FD2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C2D228206D2400982FD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C2DC28206D2400982FD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C2E628206D2400982FD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D9C2EE28206D2500982FD2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C2F128206D2500982FD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D9C30628206D2600982FD2 /* Preview Assets.xcassets in Resources */,
+				95D9C30328206D2600982FD2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C30B28206D2600982FD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C31528206D2600982FD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95D9C2C028206D2200982FD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D9C2CA28206D2200982FD2 /* ContentView.swift in Sources */,
+				95D9C2C828206D2200982FD2 /* goalzApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C2D028206D2400982FD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D9C2D928206D2400982FD2 /* goalzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C2DA28206D2400982FD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D9C2E528206D2400982FD2 /* goalzUITestsLaunchTests.swift in Sources */,
+				95D9C2E328206D2400982FD2 /* goalzUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C2EF28206D2500982FD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D9C2FD28206D2500982FD2 /* NotificationController.swift in Sources */,
+				95D9C2FB28206D2500982FD2 /* ContentView.swift in Sources */,
+				95D9C30128206D2500982FD2 /* ComplicationController.swift in Sources */,
+				95D9C2F928206D2500982FD2 /* goalzApp.swift in Sources */,
+				95D9C2FF28206D2500982FD2 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C30928206D2600982FD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D9C31228206D2600982FD2 /* goalz_WatchKit_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D9C31328206D2600982FD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D9C31C28206D2600982FD2 /* goalz_WatchKit_AppUITests.swift in Sources */,
+				95D9C31E28206D2600982FD2 /* goalz_WatchKit_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95D9C2D628206D2400982FD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95D9C2C328206D2200982FD2 /* goalz */;
+			targetProxy = 95D9C2D528206D2400982FD2 /* PBXContainerItemProxy */;
+		};
+		95D9C2E028206D2400982FD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95D9C2C328206D2200982FD2 /* goalz */;
+			targetProxy = 95D9C2DF28206D2400982FD2 /* PBXContainerItemProxy */;
+		};
+		95D9C2EB28206D2400982FD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95D9C2E728206D2400982FD2 /* goalz WatchKit App */;
+			targetProxy = 95D9C2EA28206D2400982FD2 /* PBXContainerItemProxy */;
+		};
+		95D9C2F628206D2500982FD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95D9C2F228206D2500982FD2 /* goalz WatchKit Extension */;
+			targetProxy = 95D9C2F528206D2500982FD2 /* PBXContainerItemProxy */;
+		};
+		95D9C30F28206D2600982FD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95D9C2F228206D2500982FD2 /* goalz WatchKit Extension */;
+			targetProxy = 95D9C30E28206D2600982FD2 /* PBXContainerItemProxy */;
+		};
+		95D9C31928206D2600982FD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95D9C2E728206D2400982FD2 /* goalz WatchKit App */;
+			targetProxy = 95D9C31828206D2600982FD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		95D9C31F28206D2600982FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		95D9C32028206D2600982FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		95D9C32228206D2600982FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"goalz WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "goalz WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "goalz WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tlallas.goalz.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		95D9C32328206D2600982FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"goalz WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "goalz WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "goalz WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tlallas.goalz.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		95D9C32628206D2600982FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = goalz_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "goalz WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tlallas.goalz;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tlallas.goalz.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		95D9C32728206D2600982FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = goalz_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "goalz WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tlallas.goalz;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tlallas.goalz.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		95D9C32A28206D2600982FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"goalz/Preview Content\"";
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tlallas.goalz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95D9C32B28206D2600982FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"goalz/Preview Content\"";
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tlallas.goalz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95D9C32D28206D2600982FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tlallas.goalzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goalz.app/goalz";
+			};
+			name = Debug;
+		};
+		95D9C32E28206D2600982FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tlallas.goalzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goalz.app/goalz";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95D9C33028206D2600982FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tlallas.goalzUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = goalz;
+			};
+			name = Debug;
+		};
+		95D9C33128206D2600982FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tlallas.goalzUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = goalz;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95D9C33328206D2600982FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tlallas.goalz-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goalz WatchKit Extension.appex/goalz WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		95D9C33428206D2600982FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tlallas.goalz-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/goalz WatchKit Extension.appex/goalz WatchKit Extension";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		95D9C33628206D2600982FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tlallas.goalz-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "goalz WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		95D9C33728206D2600982FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J69VMXBK6A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tlallas.goalz-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "goalz WatchKit App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95D9C2BF28206D2200982FD2 /* Build configuration list for PBXProject "goalz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D9C31F28206D2600982FD2 /* Debug */,
+				95D9C32028206D2600982FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D9C32128206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalz WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D9C32228206D2600982FD2 /* Debug */,
+				95D9C32328206D2600982FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D9C32528206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalz WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D9C32628206D2600982FD2 /* Debug */,
+				95D9C32728206D2600982FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D9C32928206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D9C32A28206D2600982FD2 /* Debug */,
+				95D9C32B28206D2600982FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D9C32C28206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D9C32D28206D2600982FD2 /* Debug */,
+				95D9C32E28206D2600982FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D9C32F28206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalzUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D9C33028206D2600982FD2 /* Debug */,
+				95D9C33128206D2600982FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D9C33228206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalz WatchKit AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D9C33328206D2600982FD2 /* Debug */,
+				95D9C33428206D2600982FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D9C33528206D2600982FD2 /* Build configuration list for PBXNativeTarget "goalz WatchKit AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D9C33628206D2600982FD2 /* Debug */,
+				95D9C33728206D2600982FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95D9C2BC28206D2200982FD2 /* Project object */;
+}
