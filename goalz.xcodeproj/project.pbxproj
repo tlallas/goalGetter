@@ -37,6 +37,7 @@
 		95D9C3502824FE6B00982FD2 /* RingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C34F2824FE6B00982FD2 /* RingViewController.swift */; };
 		95D9C3522825026800982FD2 /* HealthKitSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C3512825026800982FD2 /* HealthKitSupport.swift */; };
 		95D9C3542825089500982FD2 /* HealthDataTypeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C3532825089500982FD2 /* HealthDataTypeValue.swift */; };
+		95D9C3562825AF6A00982FD2 /* RadioButtonField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C3552825AF6A00982FD2 /* RadioButtonField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,7 @@
 		95D9C34F2824FE6B00982FD2 /* RingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewController.swift; sourceTree = "<group>"; };
 		95D9C3512825026800982FD2 /* HealthKitSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSupport.swift; sourceTree = "<group>"; };
 		95D9C3532825089500982FD2 /* HealthDataTypeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataTypeValue.swift; sourceTree = "<group>"; };
+		95D9C3552825AF6A00982FD2 /* RadioButtonField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 				95D9C34D2824FA1900982FD2 /* WelcomeViewController.swift */,
 				95D9C33828206D8D00982FD2 /* TabBarView.swift */,
 				95D9C33C28206E5900982FD2 /* GoalView.swift */,
+				95D9C3552825AF6A00982FD2 /* RadioButtonField.swift */,
 				95D9C3452820815700982FD2 /* RingView.swift */,
 				95D9C34F2824FE6B00982FD2 /* RingViewController.swift */,
 				95D9C3532825089500982FD2 /* HealthDataTypeValue.swift */,
@@ -580,6 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D9C3562825AF6A00982FD2 /* RadioButtonField.swift in Sources */,
 				95D9C3502824FE6B00982FD2 /* RingViewController.swift in Sources */,
 				95D9C33D28206E5900982FD2 /* GoalView.swift in Sources */,
 				95D9C34E2824FA1A00982FD2 /* WelcomeViewController.swift in Sources */,
