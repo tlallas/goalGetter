@@ -27,6 +27,16 @@
 		95D9C31228206D2600982FD2 /* goalz_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C31128206D2600982FD2 /* goalz_WatchKit_AppTests.swift */; };
 		95D9C31C28206D2600982FD2 /* goalz_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C31B28206D2600982FD2 /* goalz_WatchKit_AppUITests.swift */; };
 		95D9C31E28206D2600982FD2 /* goalz_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C31D28206D2600982FD2 /* goalz_WatchKit_AppUITestsLaunchTests.swift */; };
+		95D9C33928206D8D00982FD2 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C33828206D8D00982FD2 /* TabBarView.swift */; };
+		95D9C33B28206DD400982FD2 /* DailyAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C33A28206DD400982FD2 /* DailyAssessmentView.swift */; };
+		95D9C33D28206E5900982FD2 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C33C28206E5900982FD2 /* GoalView.swift */; };
+		95D9C3462820815700982FD2 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C3452820815700982FD2 /* RingView.swift */; };
+		95D9C34A2824F75300982FD2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D9C3492824F75300982FD2 /* HealthKit.framework */; };
+		95D9C34C2824F91500982FD2 /* HealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C34B2824F91500982FD2 /* HealthData.swift */; };
+		95D9C34E2824FA1A00982FD2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C34D2824FA1900982FD2 /* WelcomeViewController.swift */; };
+		95D9C3502824FE6B00982FD2 /* RingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C34F2824FE6B00982FD2 /* RingViewController.swift */; };
+		95D9C3522825026800982FD2 /* HealthKitSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C3512825026800982FD2 /* HealthKitSupport.swift */; };
+		95D9C3542825089500982FD2 /* HealthDataTypeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C3532825089500982FD2 /* HealthDataTypeValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +137,17 @@
 		95D9C31728206D2600982FD2 /* goalz WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "goalz WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D9C31B28206D2600982FD2 /* goalz_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalz_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		95D9C31D28206D2600982FD2 /* goalz_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalz_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		95D9C33828206D8D00982FD2 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		95D9C33A28206DD400982FD2 /* DailyAssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAssessmentView.swift; sourceTree = "<group>"; };
+		95D9C33C28206E5900982FD2 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		95D9C3452820815700982FD2 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		95D9C3472824F75300982FD2 /* goalz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = goalz.entitlements; sourceTree = "<group>"; };
+		95D9C3492824F75300982FD2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		95D9C34B2824F91500982FD2 /* HealthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthData.swift; sourceTree = "<group>"; };
+		95D9C34D2824FA1900982FD2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		95D9C34F2824FE6B00982FD2 /* RingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewController.swift; sourceTree = "<group>"; };
+		95D9C3512825026800982FD2 /* HealthKitSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSupport.swift; sourceTree = "<group>"; };
+		95D9C3532825089500982FD2 /* HealthDataTypeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataTypeValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D9C34A2824F75300982FD2 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +208,7 @@
 				95D9C31028206D2600982FD2 /* goalz WatchKit AppTests */,
 				95D9C31A28206D2600982FD2 /* goalz WatchKit AppUITests */,
 				95D9C2C528206D2200982FD2 /* Products */,
+				95D9C3482824F75300982FD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,7 +229,17 @@
 		95D9C2C628206D2200982FD2 /* goalz */ = {
 			isa = PBXGroup;
 			children = (
+				95D9C3472824F75300982FD2 /* goalz.entitlements */,
 				95D9C2C728206D2200982FD2 /* goalzApp.swift */,
+				95D9C34B2824F91500982FD2 /* HealthData.swift */,
+				95D9C34D2824FA1900982FD2 /* WelcomeViewController.swift */,
+				95D9C33828206D8D00982FD2 /* TabBarView.swift */,
+				95D9C33C28206E5900982FD2 /* GoalView.swift */,
+				95D9C3452820815700982FD2 /* RingView.swift */,
+				95D9C34F2824FE6B00982FD2 /* RingViewController.swift */,
+				95D9C3532825089500982FD2 /* HealthDataTypeValue.swift */,
+				95D9C3512825026800982FD2 /* HealthKitSupport.swift */,
+				95D9C33A28206DD400982FD2 /* DailyAssessmentView.swift */,
 				95D9C2C928206D2200982FD2 /* ContentView.swift */,
 				95D9C2CB28206D2400982FD2 /* Assets.xcassets */,
 				95D9C2CD28206D2400982FD2 /* Preview Content */,
@@ -286,6 +319,14 @@
 				95D9C31D28206D2600982FD2 /* goalz_WatchKit_AppUITestsLaunchTests.swift */,
 			);
 			path = "goalz WatchKit AppUITests";
+			sourceTree = "<group>";
+		};
+		95D9C3482824F75300982FD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95D9C3492824F75300982FD2 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -539,7 +580,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D9C3502824FE6B00982FD2 /* RingViewController.swift in Sources */,
+				95D9C33D28206E5900982FD2 /* GoalView.swift in Sources */,
+				95D9C34E2824FA1A00982FD2 /* WelcomeViewController.swift in Sources */,
+				95D9C3542825089500982FD2 /* HealthDataTypeValue.swift in Sources */,
+				95D9C34C2824F91500982FD2 /* HealthData.swift in Sources */,
+				95D9C33B28206DD400982FD2 /* DailyAssessmentView.swift in Sources */,
+				95D9C3462820815700982FD2 /* RingView.swift in Sources */,
 				95D9C2CA28206D2200982FD2 /* ContentView.swift in Sources */,
+				95D9C33928206D8D00982FD2 /* TabBarView.swift in Sources */,
+				95D9C3522825026800982FD2 /* HealthKitSupport.swift in Sources */,
 				95D9C2C828206D2200982FD2 /* goalzApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -858,12 +908,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = goalz/goalz.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"goalz/Preview Content\"";
 				DEVELOPMENT_TEAM = J69VMXBK6A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow GoalGetter to read workout information.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow GoalGetter to write workouts and other data it generates.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -889,12 +942,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = goalz/goalz.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"goalz/Preview Content\"";
 				DEVELOPMENT_TEAM = J69VMXBK6A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow GoalGetter to read workout information.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow GoalGetter to write workouts and other data it generates.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
