@@ -9,7 +9,17 @@ import SwiftUI
 import UIKit
 import HealthKit
 
+func calculateGoal(wellLevel: Double) -> Double {
+    // minutes = -1(x - 6.5)^2 + 0.5x^2 + z
+    // x = wellbeing level, z = baseline exercise goal
+    let baseline : Double = 30.0
+    let minutes :  Double = 0.5*(Double(wellLevel*wellLevel)) - Double((wellLevel - 6.5)*(wellLevel - 6.5)) + baseline
+    return minutes
+}
+
 struct DailyAssessmentView: View {
+    @Binding var tabSelection: Int
+    @Binding var minutesGoal : Double
     @State private var selected = 1
     @State var wellbeing = 0
     @State var logged : Bool = false
@@ -33,7 +43,7 @@ struct DailyAssessmentView: View {
                                    label: "1",
                                    topLabel: "Worst",
                                    color:.black,
-                                   bgColor: .blue,
+                                   bgColor: .purple,
                                    isMarked: $wellbeing.wrappedValue == 1 ? true : false,
                                    callback: { selected in
                                        self.wellbeing = selected
@@ -45,7 +55,7 @@ struct DailyAssessmentView: View {
                                    label: "",
                                    topLabel: " ",
                                    color:.black,
-                                   bgColor: .blue,
+                                   bgColor: .purple,
                                    isMarked: $wellbeing.wrappedValue == 2 ? true : false,
                                    callback: { selected in
                                        self.wellbeing = selected
@@ -57,7 +67,7 @@ struct DailyAssessmentView: View {
                                    label: "",
                                    topLabel: " ",
                                    color:.black,
-                                   bgColor: .blue,
+                                   bgColor: .purple,
                                    isMarked: $wellbeing.wrappedValue == 3 ? true : false,
                                    callback: { selected in
                                        self.wellbeing = selected
@@ -69,7 +79,7 @@ struct DailyAssessmentView: View {
                                    label: "4",
                                    topLabel: "Avg",
                                    color:.black,
-                                   bgColor: .blue,
+                                   bgColor: .purple,
                                    isMarked: $wellbeing.wrappedValue == 4 ? true : false,
                                    callback: { selected in
                                        self.wellbeing = selected
@@ -81,7 +91,7 @@ struct DailyAssessmentView: View {
                                    label: "",
                                    topLabel: " ",
                                    color:.black,
-                                   bgColor: .blue,
+                                   bgColor: .purple,
                                    isMarked: $wellbeing.wrappedValue == 5 ? true : false,
                                    callback: { selected in
                                        self.wellbeing = selected
@@ -93,7 +103,7 @@ struct DailyAssessmentView: View {
                                    label: "",
                                    topLabel: " ",
                                    color:.black,
-                                   bgColor: .blue,
+                                   bgColor: .purple,
                                    isMarked: $wellbeing.wrappedValue == 6 ? true : false,
                                    callback: { selected in
                                        self.wellbeing = selected
@@ -105,7 +115,7 @@ struct DailyAssessmentView: View {
                                    label: "7",
                                    topLabel: "Best",
                                    color:.black,
-                                   bgColor: .blue,
+                                   bgColor: .purple,
                                    isMarked: $wellbeing.wrappedValue == 7 ? true : false,
                                    callback: { selected in
                                        self.wellbeing = selected
@@ -122,12 +132,14 @@ struct DailyAssessmentView: View {
                 if wellbeing > 0 {
                     HStack {
                         Button {
-                            
+                            tabSelection = 1
+                            minutesGoal = calculateGoal(wellLevel: Double(wellbeing))
+                            print(minutesGoal)
                         } label: {
                             Text("Log Wellbeing")
                                 .padding()
                                 .frame(minWidth:300)
-                                .background(Color.blue)
+                                .background(Color.purple)
                                 .foregroundColor(.white)
                                 .cornerRadius(20)
                         }
@@ -144,8 +156,6 @@ struct DailyAssessmentView: View {
                         }
                     }
             }
-        
-        
     }
 }
 
@@ -154,7 +164,6 @@ struct WellbeingBlurb : View {
     
     var body : some View {
         if wellbeing > 0 {
-        HStack (alignment: .top){
             VStack (alignment: .leading){
                     HStack {
                         Text("Your wellbeing is at a")
@@ -163,18 +172,15 @@ struct WellbeingBlurb : View {
                         Text(String(wellbeing))
                             .font(.headline)
                             .fontWeight(.bold)
-                            .foregroundColor(Color.blue)
+                            .foregroundColor(Color.purple)
                         Text("today")
                             .font(.headline)
                             .fontWeight(.bold)
+                        Spacer()
                     }
                 
-                if wellbeing < 4 && wellbeing > 1 {
-                    Text("You might be feeling worse than normal, but you can still hit your exercise goals!")
-                }
-                if wellbeing == 1 {
-                    Text("You're not feeling good today, but you should still get some movement in if you can!")
-                }
+                if wellbeing < 4 && wellbeing > 1 { Text("You might be feeling worse than normal, but you can still hit your exercise goals!") }
+                if wellbeing == 1 { Text("You're not feeling good today, but you should still get some movement in if you can!") }
                 if wellbeing == 4 {
                     Text("You're feeling pretty normal today! Get after it :)")
                 }
@@ -184,23 +190,18 @@ struct WellbeingBlurb : View {
                 if wellbeing == 7 {
                     Text("You're feeling your best! You can do anything today!")
                 }
-            }
-        }.padding()
-            .background(Color.white)
+                Spacer()
+            }.padding([.top, .leading])
+                .frame(width: 300, height: 110)
+                .background(Color.purple.opacity(0.1))
             .cornerRadius(12)
-            .border(Color.blue)
-            .frame(width: 350)
         }
     }
     }
     
 }
 
-struct DailyAssessmentView_Previews: PreviewProvider {
-    static var previews: some View {
-        DailyAssessmentView()
-    }
-}
+
 
 //class RadioButton: UIButton {
 //    required init?(coder aDecoder: NSCoder) {

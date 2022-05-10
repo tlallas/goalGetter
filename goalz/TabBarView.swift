@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @State private var tabSelection = 0
+    @State var minutesGoal : Double = 30.0
+    
     var body: some View {
-        TabView {
+        TabView(selection: $tabSelection) {
             NavigationView {
                 VStack{
-                    DailyAssessmentView()
+                    DailyAssessmentView(tabSelection: $tabSelection, minutesGoal: $minutesGoal)
                     Spacer()
                     Divider()
                 }
@@ -26,7 +29,7 @@ struct TabBarView: View {
 
             NavigationView {
                 VStack {
-                    GoalView()
+                    GoalView(minutesGoal: $minutesGoal)
                     Spacer()
                     Divider()
                 }

@@ -12,11 +12,10 @@ var minutesDataArray: [HealthDataTypeValue] = []
 
 class UserProgress : ObservableObject {
     @Published var minutes = 0.0
-    @Published var goal = 30.0
     @Published var pct = 0.0
 }
 
-func calcRingFill(_ progress: UserProgress) {
+func calcRingFill(_ progress: UserProgress, goal: Double) {
     let exerciseType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.appleExerciseTime)!
     let anchor = createAnchorDate()
     let daily = DateComponents(day: 1)
@@ -24,15 +23,15 @@ func calcRingFill(_ progress: UserProgress) {
     let query = HKStatisticsCollectionQuery(quantityType: exerciseType, quantitySamplePredicate: createLastWeekPredicate(), options: .cumulativeSum, anchorDate: anchor, intervalComponents: daily)
     
     // Set the results handler
-    query.initialResultsHandler = { query, results, error in
+    query.initialResultsHandler =  { query, results, error in
         if let statsCollection = results {
-            updateUIFromStatistics(statsCollection, progress)
+            updateUIFromStatistics(statsCollection, progress, goal: goal)
         }
     }
     HealthData.healthStore.execute(query)
 }
 
-func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection, _ progress: UserProgress) {
+func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection, _ progress: UserProgress, goal: Double) {
     minutesDataArray = []
     let now = Date()
     let startDate = getLastWeekStartDate()
@@ -50,32 +49,34 @@ func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection, _ pr
     }
     DispatchQueue.main.async {
         progress.minutes = minutesDataArray[6].value
-        progress.pct = progress.minutes/progress.goal * 100
+        progress.pct = progress.minutes/goal * 100
     }
 }
 
 struct GoalView: View {
+    @Binding var minutesGoal : Double
     @StateObject var progress = UserProgress()
     
     var body: some View {
         VStack {
             Text("Daily Exercise Goal")
                 .font(.headline)
+                .padding(.bottom)
             
             RingView(ringWidth: 15, percent: progress.pct == 0.0 ? 0.1 : progress.pct,
                      backgroundColor: Color.black.opacity(0.2),
-                     foregroundColors: [Color.pink])
+                     foregroundColors: [Color.purple])
             .frame(width: 200, height: 200)
             
             HStack (alignment: .firstTextBaseline) {
-                Text(String(progress.minutes))
+                Text(String(Int(minutesGoal)))
                     .font(.title)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.pink)
+                    .foregroundColor(Color.purple)
                 Text("min")
             }
             if progress.pct < 100.0 {
-                Text(String(progress.goal - progress.minutes) + " min to reach your goal for today!")
+                Text(String(Int(minutesGoal - progress.minutes)) + " min to reach your goal for today!")
                     .font(.footnote)
                     .foregroundColor(Color.black.opacity(0.4))
             } else {
@@ -84,19 +85,13 @@ struct GoalView: View {
                     .foregroundColor(Color.black.opacity(0.4))
             }
             Divider().padding()
-        }.padding(.top, 70)
-            .ignoresSafeArea()
-            .onAppear {
-                calcRingFill(progress)
+        }.onAppear {
+            calcRingFill(progress, goal: minutesGoal)
                 print(progress.minutes)
             }
     }
 }
 
-struct GoalView_Previews: PreviewProvider {
-    static var previews: some View {
-        GoalView()
-    }
-}
+
 
 
