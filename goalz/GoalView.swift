@@ -95,7 +95,7 @@ struct GoalView: View {
         } else {
             Text("Fill out your daily wellbeing check to get your exercise goal!")
                 .font(.title)
-                .padding(5)
+                .padding([.leading, .trailing])
         }
     }
 }

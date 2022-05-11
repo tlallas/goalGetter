@@ -29,10 +29,10 @@ struct OnboardingView: View {
     let exampleColor : Color = Color(red: 147/255, green: 174/255, blue: 212/255)
     
     var body: some View {
-        ZStack { // 1
+        ScrollView { // 1
         
             VStack {
-      
+              
            
                 VStack {
                     Text(titles[currentPageIndex])
@@ -44,7 +44,7 @@ struct OnboardingView: View {
                             .fontWeight(.bold)
                             .padding(.bottom)
                     }
-                }
+                }.padding(.top, 110)
 
 
             if (self.currentPageIndex == 1) {
@@ -150,7 +150,8 @@ struct OnboardingView: View {
                 .padding(.trailing, 25)
                 .padding(.leading, 25)
                 .padding(.bottom, 75)
-        }}
+            }
+        }.ignoresSafeArea(.keyboard)
     }
 }
 
