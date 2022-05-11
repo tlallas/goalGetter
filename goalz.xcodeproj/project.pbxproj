@@ -14,9 +14,7 @@
 		95D9C2D928206D2400982FD2 /* goalzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2D828206D2400982FD2 /* goalzTests.swift */; };
 		95D9C2E328206D2400982FD2 /* goalzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2E228206D2400982FD2 /* goalzUITests.swift */; };
 		95D9C2E528206D2400982FD2 /* goalzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2E428206D2400982FD2 /* goalzUITestsLaunchTests.swift */; };
-		95D9C2E928206D2400982FD2 /* goalz WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 95D9C2E828206D2400982FD2 /* goalz WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		95D9C2EE28206D2500982FD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D9C2ED28206D2500982FD2 /* Assets.xcassets */; };
-		95D9C2F428206D2500982FD2 /* goalz WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 95D9C2F328206D2500982FD2 /* goalz WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		95D9C2F928206D2500982FD2 /* goalzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2F828206D2500982FD2 /* goalzApp.swift */; };
 		95D9C2FB28206D2500982FD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2FA28206D2500982FD2 /* ContentView.swift */; };
 		95D9C2FD28206D2500982FD2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C2FC28206D2500982FD2 /* NotificationController.swift */; };
@@ -38,6 +36,10 @@
 		95D9C3522825026800982FD2 /* HealthKitSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C3512825026800982FD2 /* HealthKitSupport.swift */; };
 		95D9C3542825089500982FD2 /* HealthDataTypeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C3532825089500982FD2 /* HealthDataTypeValue.swift */; };
 		95D9C3562825AF6A00982FD2 /* RadioButtonField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9C3552825AF6A00982FD2 /* RadioButtonField.swift */; };
+		95EC8826282B813E0036AAD5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95EC8824282B813E0036AAD5 /* Model.xcdatamodeld */; };
+		95EC8828282B81AD0036AAD5 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC8827282B81AD0036AAD5 /* PersistenceController.swift */; };
+		95EC882A282B84EA0036AAD5 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC8829282B84E90036AAD5 /* Onboarding.swift */; };
+		95EC882C282B85210036AAD5 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC882B282B85210036AAD5 /* PageControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +94,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				95D9C2F428206D2500982FD2 /* goalz WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,7 +104,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				95D9C2E928206D2400982FD2 /* goalz WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,19 +111,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		95D9C2C428206D2200982FD2 /* goalz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goalz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C2C428206D2200982FD2 /* goalz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = goalz.app; path = "/Users/taylorlallas/Desktop/goalz/build/Debug-iphoneos/goalz.app"; sourceTree = "<absolute>"; };
 		95D9C2C728206D2200982FD2 /* goalzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalzApp.swift; sourceTree = "<group>"; };
 		95D9C2C928206D2200982FD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95D9C2CB28206D2400982FD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95D9C2CE28206D2400982FD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		95D9C2D428206D2400982FD2 /* goalzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goalzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C2D428206D2400982FD2 /* goalzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = goalzTests.xctest; path = "/Users/taylorlallas/Desktop/goalz/build/Debug-iphoneos/goalzTests.xctest"; sourceTree = "<absolute>"; };
 		95D9C2D828206D2400982FD2 /* goalzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalzTests.swift; sourceTree = "<group>"; };
-		95D9C2DE28206D2400982FD2 /* goalzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goalzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C2DE28206D2400982FD2 /* goalzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = goalzUITests.xctest; path = "/Users/taylorlallas/Desktop/goalz/build/Debug-iphoneos/goalzUITests.xctest"; sourceTree = "<absolute>"; };
 		95D9C2E228206D2400982FD2 /* goalzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalzUITests.swift; sourceTree = "<group>"; };
 		95D9C2E428206D2400982FD2 /* goalzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalzUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		95D9C2E828206D2400982FD2 /* goalz WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goalz WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C2E828206D2400982FD2 /* goalz WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "goalz WatchKit App.app"; path = "/Users/taylorlallas/Desktop/goalz/build/Debug-watchos/goalz WatchKit App.app"; sourceTree = "<absolute>"; };
 		95D9C2ED28206D2500982FD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		95D9C2F328206D2500982FD2 /* goalz WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "goalz WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C2F328206D2500982FD2 /* goalz WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; name = "goalz WatchKit Extension.appex"; path = "/Users/taylorlallas/Desktop/goalz/build/Debug-watchos/goalz WatchKit Extension.appex"; sourceTree = "<absolute>"; };
 		95D9C2F828206D2500982FD2 /* goalzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalzApp.swift; sourceTree = "<group>"; };
 		95D9C2FA28206D2500982FD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95D9C2FC28206D2500982FD2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -133,9 +133,9 @@
 		95D9C30528206D2600982FD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95D9C30728206D2600982FD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95D9C30828206D2600982FD2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		95D9C30D28206D2600982FD2 /* goalz WatchKit AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "goalz WatchKit AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C30D28206D2600982FD2 /* goalz WatchKit AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "goalz WatchKit AppTests.xctest"; path = "/Users/taylorlallas/Desktop/goalz/build/Debug-watchos/goalz WatchKit AppTests.xctest"; sourceTree = "<absolute>"; };
 		95D9C31128206D2600982FD2 /* goalz_WatchKit_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalz_WatchKit_AppTests.swift; sourceTree = "<group>"; };
-		95D9C31728206D2600982FD2 /* goalz WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "goalz WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D9C31728206D2600982FD2 /* goalz WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "goalz WatchKit AppUITests.xctest"; path = "/Users/taylorlallas/Desktop/goalz/build/Debug-watchos/goalz WatchKit AppUITests.xctest"; sourceTree = "<absolute>"; };
 		95D9C31B28206D2600982FD2 /* goalz_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalz_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		95D9C31D28206D2600982FD2 /* goalz_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalz_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		95D9C33828206D8D00982FD2 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -150,6 +150,10 @@
 		95D9C3512825026800982FD2 /* HealthKitSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSupport.swift; sourceTree = "<group>"; };
 		95D9C3532825089500982FD2 /* HealthDataTypeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataTypeValue.swift; sourceTree = "<group>"; };
 		95D9C3552825AF6A00982FD2 /* RadioButtonField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonField.swift; sourceTree = "<group>"; };
+		95EC8825282B813E0036AAD5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		95EC8827282B81AD0036AAD5 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		95EC8829282B84E90036AAD5 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		95EC882B282B85210036AAD5 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,34 +213,23 @@
 				95D9C2F728206D2500982FD2 /* goalz WatchKit Extension */,
 				95D9C31028206D2600982FD2 /* goalz WatchKit AppTests */,
 				95D9C31A28206D2600982FD2 /* goalz WatchKit AppUITests */,
-				95D9C2C528206D2200982FD2 /* Products */,
 				95D9C3482824F75300982FD2 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		95D9C2C528206D2200982FD2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				95D9C2C428206D2200982FD2 /* goalz.app */,
-				95D9C2D428206D2400982FD2 /* goalzTests.xctest */,
-				95D9C2DE28206D2400982FD2 /* goalzUITests.xctest */,
-				95D9C2E828206D2400982FD2 /* goalz WatchKit App.app */,
-				95D9C2F328206D2500982FD2 /* goalz WatchKit Extension.appex */,
-				95D9C30D28206D2600982FD2 /* goalz WatchKit AppTests.xctest */,
-				95D9C31728206D2600982FD2 /* goalz WatchKit AppUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		95D9C2C628206D2200982FD2 /* goalz */ = {
 			isa = PBXGroup;
 			children = (
 				95D9C3472824F75300982FD2 /* goalz.entitlements */,
+				95EC8824282B813E0036AAD5 /* Model.xcdatamodeld */,
 				95D9C2C728206D2200982FD2 /* goalzApp.swift */,
 				95D9C34B2824F91500982FD2 /* HealthData.swift */,
 				95D9C34D2824FA1900982FD2 /* WelcomeViewController.swift */,
 				95D9C33828206D8D00982FD2 /* TabBarView.swift */,
 				95D9C33C28206E5900982FD2 /* GoalView.swift */,
+				95EC8827282B81AD0036AAD5 /* PersistenceController.swift */,
+				95EC8829282B84E90036AAD5 /* Onboarding.swift */,
+				95EC882B282B85210036AAD5 /* PageControl.swift */,
 				95D9C3552825AF6A00982FD2 /* RadioButtonField.swift */,
 				95D9C3452820815700982FD2 /* RingView.swift */,
 				95D9C34F2824FE6B00982FD2 /* RingViewController.swift */,
@@ -506,7 +499,7 @@
 				Base,
 			);
 			mainGroup = 95D9C2BB28206D2200982FD2;
-			productRefGroup = 95D9C2C528206D2200982FD2 /* Products */;
+			productRefGroup = 95D9C2BB28206D2200982FD2;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -584,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D9C3562825AF6A00982FD2 /* RadioButtonField.swift in Sources */,
+				95EC8828282B81AD0036AAD5 /* PersistenceController.swift in Sources */,
 				95D9C3502824FE6B00982FD2 /* RingViewController.swift in Sources */,
 				95D9C33D28206E5900982FD2 /* GoalView.swift in Sources */,
 				95D9C34E2824FA1A00982FD2 /* WelcomeViewController.swift in Sources */,
@@ -592,8 +586,11 @@
 				95D9C33B28206DD400982FD2 /* DailyAssessmentView.swift in Sources */,
 				95D9C3462820815700982FD2 /* RingView.swift in Sources */,
 				95D9C2CA28206D2200982FD2 /* ContentView.swift in Sources */,
+				95EC882C282B85210036AAD5 /* PageControl.swift in Sources */,
 				95D9C33928206D8D00982FD2 /* TabBarView.swift in Sources */,
 				95D9C3522825026800982FD2 /* HealthKitSupport.swift in Sources */,
+				95EC882A282B84EA0036AAD5 /* Onboarding.swift in Sources */,
+				95EC8826282B813E0036AAD5 /* Model.xcdatamodeld in Sources */,
 				95D9C2C828206D2200982FD2 /* goalzApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1218,6 +1215,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		95EC8824282B813E0036AAD5 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				95EC8825282B813E0036AAD5 /* Model.xcdatamodel */,
+			);
+			currentVersion = 95EC8825282B813E0036AAD5 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 95D9C2BC28206D2200982FD2 /* Project object */;
 }

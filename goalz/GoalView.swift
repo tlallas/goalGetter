@@ -55,40 +55,48 @@ func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection, _ pr
 
 struct GoalView: View {
     @Binding var minutesGoal : Double
+    @Binding var logged : Bool
     @StateObject var progress = UserProgress()
     
     var body: some View {
-        VStack {
-            Text("Daily Exercise Goal")
-                .font(.headline)
-                .padding(.bottom)
-            
-            RingView(ringWidth: 15, percent: progress.pct == 0.0 ? 0.1 : progress.pct,
-                     backgroundColor: Color.black.opacity(0.2),
-                     foregroundColors: [Color.purple])
-            .frame(width: 200, height: 200)
-            
-            HStack (alignment: .firstTextBaseline) {
-                Text(String(Int(minutesGoal)))
+        if logged {
+            VStack {
+                Text("Daily Exercise Goal")
                     .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.purple)
-                Text("min")
-            }
-            if progress.pct < 100.0 {
-                Text(String(Int(minutesGoal - progress.minutes)) + " min to reach your goal for today!")
-                    .font(.footnote)
-                    .foregroundColor(Color.black.opacity(0.4))
-            } else {
-                Text("GOAL ACHIEVED!")
-                    .font(.footnote)
-                    .foregroundColor(Color.black.opacity(0.4))
-            }
-            Divider().padding()
-        }.onAppear {
-            calcRingFill(progress, goal: minutesGoal)
-                print(progress.minutes)
-            }
+                    .padding(.bottom)
+                
+                RingView(ringWidth: 15, percent: progress.pct == 0.0 ? 0.1 : progress.pct,
+                         backgroundColor: Color.black.opacity(0.2),
+                         foregroundColors: [Color.purple])
+                .frame(width: 200, height: 200)
+                
+                HStack (alignment: .firstTextBaseline) {
+                    Text(String(Int(minutesGoal)))
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.purple)
+                    Text("min")
+                }
+                if progress.pct < 100.0 {
+                    Text(String(Int(minutesGoal - progress.minutes)) + " min to reach your goal for today!")
+                        .font(.footnote)
+                        .foregroundColor(Color.black.opacity(0.4))
+                } else {
+                    Text("GOAL ACHIEVED!")
+                        .font(.footnote)
+                        .foregroundColor(Color.black.opacity(0.4))
+                }
+                Divider().padding()
+                
+            }.onAppear {
+                calcRingFill(progress, goal: minutesGoal)
+                    print(progress.minutes)
+                }
+        } else {
+            Text("Fill out your daily wellbeing check to get your exercise goal!")
+                .font(.title)
+                .padding(5)
+        }
     }
 }
 

@@ -9,10 +9,9 @@ import SwiftUI
 import UIKit
 import HealthKit
 
-func calculateGoal(wellLevel: Double) -> Double {
+func calculateGoal(wellLevel: Double, baseline: Double) -> Double {
     // minutes = -1(x - 6.5)^2 + 0.5x^2 + z
     // x = wellbeing level, z = baseline exercise goal
-    let baseline : Double = 30.0
     let minutes :  Double = 0.5*(Double(wellLevel*wellLevel)) - Double((wellLevel - 6.5)*(wellLevel - 6.5)) + baseline
     return minutes
 }
@@ -22,19 +21,30 @@ struct DailyAssessmentView: View {
     @Binding var minutesGoal : Double
     @State private var selected = 1
     @State var wellbeing = 0
-    @State var logged : Bool = false
+    @Binding var logged : Bool
+    let persistentController = PersistenceController.shared
+    @FetchRequest(entity: User.entity(),sortDescriptors:[])
+    var user: FetchedResults<User>
     
     var body: some View {
         VStack {
+            if !logged {
+                Text("Please complete your daily wellbeing check!")
+                    .font(.title)
+                    .padding(.bottom)
+            } else {
+                Text("Daily check complete!")
+                    .font(.title)
+                    .padding(.bottom)
+            }
             VStack {
-            HStack {
-                Spacer()
+   
+                if !logged {
                 Text("How are you feeling today?")
                     .font(.headline)
+                    .padding(.top)
                     .padding(.bottom, 30)
-                Spacer()
-            }
-                
+            
 
                 HStack (spacing: 18){
    
@@ -126,14 +136,15 @@ struct DailyAssessmentView: View {
                 
             }.frame(width: 300, height: 100)
                     .padding(.bottom)
-                
+            }
                 WellbeingBlurb(wellbeing: $wellbeing).padding(.bottom, 20)
                 
-                if wellbeing > 0 {
+                if wellbeing > 0 && logged == false {
                     HStack {
                         Button {
                             tabSelection = 1
-                            minutesGoal = calculateGoal(wellLevel: Double(wellbeing))
+                            minutesGoal = calculateGoal(wellLevel: Double(wellbeing), baseline: user[0].baselineGoal)
+                            logged = true
                             print(minutesGoal)
                         } label: {
                             Text("Log Wellbeing")
