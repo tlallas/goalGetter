@@ -58,7 +58,7 @@ func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection, _ pr
         minutesDataArray.append(dataValue)
     }
     DispatchQueue.main.async {
-        progress.minutes = minutesDataArray[6].value
+        progress.minutes = minutesDataArray[6].value //PROBLEM
         progress.pct = progress.minutes/goal * 100
         
         //check for goal completion to send notification!

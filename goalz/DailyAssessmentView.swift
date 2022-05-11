@@ -20,7 +20,7 @@ struct DailyAssessmentView: View {
     @Binding var tabSelection: Int
     @Binding var minutesGoal : Double
     @State private var selected = 1
-    @State var wellbeing = 0
+    @State var wellbeing : Int = 0
     @Binding var logged : Bool
     let persistentController = PersistenceController.shared
     @FetchRequest(entity: User.entity(),sortDescriptors:[])
@@ -132,11 +132,10 @@ struct DailyAssessmentView: View {
                                        print("Selected Wellbeing is: \(selected)")
                                    }
                                )
-             
+                }.frame(width: 300, height: 100)
+                        .padding(.bottom)
+                }
                 
-            }.frame(width: 300, height: 100)
-                    .padding(.bottom)
-            }
                 WellbeingBlurb(wellbeing: $wellbeing).padding(.bottom, 20)
                 
                 if wellbeing > 0 && logged == false {
@@ -145,7 +144,11 @@ struct DailyAssessmentView: View {
                             tabSelection = 1
                             minutesGoal = calculateGoal(wellLevel: Double(wellbeing), baseline: user[0].baselineGoal)
                             logged = true
-                            print(minutesGoal)
+                            user[0].lastLogged = Date()
+                            user[0].wellbeingLevel = Int32(wellbeing)
+                            user[0].minutesGoal = minutesGoal
+                            PersistenceController.shared.save()
+      
                         } label: {
                             Text("Log Wellbeing")
                                 .padding()
@@ -166,6 +169,8 @@ struct DailyAssessmentView: View {
                             //they can't do study lol 
                         }
                     }
+                    
+                    wellbeing = Int(user[0].wellbeingLevel)
                     requestNotificationAuthorization()
                     scheduleMorningNotification()
             }

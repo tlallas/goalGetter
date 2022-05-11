@@ -9,8 +9,8 @@ import SwiftUI
 
 struct TabBarView: View {
     @State private var tabSelection = 0
-    @State var minutesGoal : Double = 30.0
-    @State var logged : Bool = false
+    @Binding var logged : Bool
+    @Binding var minutesGoal : Double 
     
     var body: some View {
         TabView(selection: $tabSelection) {
@@ -44,8 +44,3 @@ struct TabBarView: View {
     }
 }
 
-struct TabBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabBarView()
-    }
-}

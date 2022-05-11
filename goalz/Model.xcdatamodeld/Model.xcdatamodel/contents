@@ -5,9 +5,12 @@
         <attribute name="firstUse" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="isOnboard" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lastLogged" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="minutesGoal" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="wellbeingLevel" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="149"/>
     </elements>
 </model>
