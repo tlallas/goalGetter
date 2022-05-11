@@ -28,6 +28,16 @@ func calcRingFill(_ progress: UserProgress, goal: Double) {
             updateUIFromStatistics(statsCollection, progress, goal: goal)
         }
     }
+    query.statisticsUpdateHandler = {
+        query, statistics, statisticsCollection, error in
+        if let statsCollection = statisticsCollection {
+            updateUIFromStatistics(statsCollection, progress, goal: goal)
+        }
+        print(query)
+        print(statistics)
+        print(statisticsCollection)
+        print(error)
+    }
     HealthData.healthStore.execute(query)
 }
 
@@ -50,6 +60,11 @@ func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection, _ pr
     DispatchQueue.main.async {
         progress.minutes = minutesDataArray[6].value
         progress.pct = progress.minutes/goal * 100
+        
+        //check for goal completion to send notification!
+        if (progress.pct >= 100) {
+            sendAchievementNotification()
+        }
     }
 }
 
@@ -100,6 +115,89 @@ struct GoalView: View {
     }
 }
 
+func sendAchievementNotification() {
+    let userNotificationCenter = UNUserNotificationCenter.current()
+    let notificationContent = UNMutableNotificationContent()
+    notificationContent.title = "Exercise goal achieved!"
+    notificationContent.body = "Way to be a goalgetter :)"
+    notificationContent.badge = NSNumber(value: 3)
+    
+//    if let url = Bundle.main.url(forResource: "dune",
+//                                withExtension: "png") {
+//        if let attachment = try? UNNotificationAttachment(identifier: "dune",
+//                                                        url: url,
+//                                                        options: nil) {
+//            notificationContent.attachments = [attachment]
+//        }
+//    }
+    
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5,
+                                                    repeats: false)
+    let request = UNNotificationRequest(identifier: "goal achieved",
+                                        content: notificationContent,
+                                        trigger: trigger)
+    
+    userNotificationCenter.add(request) { (error) in
+        if let error = error {
+            print("Notification Error: ", error)
+        }
+    }
+}
 
 
 
+
+//CODE TO OBSERVE WORKOUTS IN BACKGROUND
+//func startObservingNewWorkouts() {
+//
+//    let sampleType =  HKObjectType.workoutType()
+//
+//    //1. Enable background delivery for workouts
+//    HealthData.healthStore.enableBackgroundDelivery(for: sampleType, frequency: .immediate) { (success, error) in
+//        if let unwrappedError = error {
+//            print("could not enable background delivery: \(unwrappedError)")
+//        }
+//        if success {
+//            print("background delivery enabled")
+//        }
+//    }
+//
+//    //2.  open observer query
+//    let query = HKObserverQuery(sampleType: sampleType, predicate: nil) { (query, completionHandler, error) in
+//
+//        updateWorkouts() {
+//            completionHandler()
+//        }
+//
+//
+//    }
+//    HealthData.healthStore.execute(query)
+//
+//}
+//
+//func updateWorkouts(completionHandler: @escaping () -> Void) {
+//
+//    var anchor: HKQueryAnchor?
+//
+//    let sampleType =  HKObjectType.workoutType()
+//
+//    let anchoredQuery = HKAnchoredObjectQuery(type: sampleType, predicate: nil, anchor: anchor, limit: HKObjectQueryNoLimit) { query, newSamples, deletedSamples, newAnchor, error in
+//
+//        handleNewWorkouts(new: newSamples!, deleted: deletedSamples!)
+//
+//        anchor = newAnchor
+//
+//        completionHandler()
+//    }
+//    HealthData.healthStore.execute(anchoredQuery)
+//
+//
+//}
+//
+//func handleNewWorkouts(new: [HKSample], deleted: [HKDeletedObject]) {
+//    // var progress = UserProgress()
+////    calcRingFill(progress, goal: minutesGoal)
+////        print(progress.minutes)
+//    
+//    print("new sample added = \(new.last.startTime!)")
+//}

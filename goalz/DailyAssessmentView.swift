@@ -166,6 +166,8 @@ struct DailyAssessmentView: View {
                             //they can't do study lol 
                         }
                     }
+                    requestNotificationAuthorization()
+                    scheduleMorningNotification()
             }
     }
 }
@@ -212,26 +214,41 @@ struct WellbeingBlurb : View {
     
 }
 
+func requestNotificationAuthorization() {
+    let userNotificationCenter = UNUserNotificationCenter.current()
+    let authOptions = UNAuthorizationOptions.init(arrayLiteral: .alert, .badge, .sound)
+    
+    userNotificationCenter.requestAuthorization(options: authOptions) { (success, error) in
+        if let error = error {
+            print("Error: ", error)
+        }
+    }
+}
 
-
-//class RadioButton: UIButton {
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        self.initButton()
+func scheduleMorningNotification() {
+    let userNotificationCenter = UNUserNotificationCenter.current()
+    let notificationContent = UNMutableNotificationContent()
+    notificationContent.title = "Time for a wellbeing check-in!"
+    notificationContent.body = "Open GoalGetter to log how you're feeling"
+    notificationContent.badge = NSNumber(value: 1)
+    
+//    if let url = Bundle.main.url(forResource: "dune",
+//                                withExtension: "png") {
+//        if let attachment = try? UNNotificationAttachment(identifier: "dune",
+//                                                        url: url,
+//                                                        options: nil) {
+//            notificationContent.attachments = [attachment]
+//        }
 //    }
-//
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        self.initButton()
-//    }
-//
-//    func initButton(){
-//        self.backgroundColor = .clear
-//        self.tintColor = .clear
-//        self.setTitle("", for: .normal)
-//        self.setImage(UIImage(named: "radio_button_unchecked")?.withRenderingMode(.alwaysOriginal), for: .normal)
-//        self.setImage(UIImage(named: "radio_button_checked")?.withRenderingMode(.alwaysOriginal), for: .highlighted)
-//        self.setImage(UIImage(named: "radio_button_checked")?.withRenderingMode(.alwaysOriginal), for: .selected)
-//
-//    }
-//}
+    
+    var datComp = DateComponents()
+    datComp.hour = 9
+    datComp.minute = 0
+    let trigger = UNCalendarNotificationTrigger(dateMatching: datComp, repeats: true)
+    let request = UNNotificationRequest(identifier: "dailycheck", content: notificationContent, trigger: trigger)
+                    userNotificationCenter.add(request) { (error : Error?) in
+                        if let theError = error {
+                            print(theError.localizedDescription)
+                        }
+                    }
+}

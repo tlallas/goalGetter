@@ -49,3 +49,5 @@ func getStatisticsQuantity(for statistics: HKStatistics, with statisticsOptions:
     
     return statisticsQuantity
 }
+
+
