@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1048550991636-cm6ka45keavdq4hug9mopi5m94icugdg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1048550991636-cm6ka45keavdq4hug9mopi5m94icugdg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCYFKcfmGXYw51uSZrG46lsJXVLV1qlLa4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1048550991636</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.tlallas.goalz</string>
+	<key>PROJECT_ID</key>
+	<string>cs347goalstudy</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cs347goalstudy.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1048550991636:ios:3c0ea2de0f04cbc9524401</string>
+</dict>
+</plist>

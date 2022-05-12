@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     let persistentController = PersistenceController.shared
     @Environment(\.managedObjectContext) var managedObjectContext
@@ -16,11 +17,12 @@ struct ContentView: View {
     @State var inOnboarding : Bool = false
     @State var logged : Bool = false
     @State var minutesGoal : Double = 30.0
+    @State var achieveNotified : Bool = false
     
     var body: some View {
         VStack {
             if !inOnboarding {
-                TabBarView(logged: $logged, minutesGoal: $minutesGoal)
+                TabBarView(logged: $logged, minutesGoal: $minutesGoal, achieveNotified: $achieveNotified)
             } else {
                 OnboardingView(inOnboarding: $inOnboarding)
             }
@@ -32,6 +34,7 @@ struct ContentView: View {
                     let now = Date()
                     if checkLoggedToday(last: lastLogDate, today: now) {
                         logged = true
+                        achieveNotified = user[0].achieveNotified
                         minutesGoal = user[0].minutesGoal
                     }
                 }

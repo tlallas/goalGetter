@@ -7,6 +7,7 @@
 
 import SwiftUI
 import HealthKit
+import Firebase
 
 //collect participant id and send to firebase
 //notification at time and when reach goal
@@ -16,6 +17,11 @@ struct goalzApp: App {
     let persistentController = PersistenceController.shared
     @Environment(\.scenePhase) var scenePhase
     
+    init () {
+        FirebaseApp.configure()
+        
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -24,13 +30,17 @@ struct goalzApp: App {
         .onChange(of: scenePhase) { (newScenePhase) in
             switch newScenePhase {
             case .background:
+                UIApplication.shared.applicationIconBadgeNumber = 0
                 print("Scene is in background")
                 persistentController.save()
             case .inactive:
+                UIApplication.shared.applicationIconBadgeNumber = 0
                 print("Scene is inactive")
             case .active:
+                UIApplication.shared.applicationIconBadgeNumber = 0
                 print("Scene is active")
             @unknown default:
+                UIApplication.shared.applicationIconBadgeNumber = 0
                 print("Scene is default")
             }
         }

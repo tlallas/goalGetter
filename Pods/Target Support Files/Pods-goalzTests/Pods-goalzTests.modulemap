@@ -1,0 +1,6 @@
+framework module Pods_goalzTests {
+  umbrella header "Pods-goalzTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

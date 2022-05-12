@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 import HealthKit
+import Firebase
 
 func calculateGoal(wellLevel: Double, baseline: Double) -> Double {
     // minutes = -1(x - 6.5)^2 + 0.5x^2 + z
@@ -17,11 +18,14 @@ func calculateGoal(wellLevel: Double, baseline: Double) -> Double {
 }
 
 struct DailyAssessmentView: View {
+    
     @Binding var tabSelection: Int
     @Binding var minutesGoal : Double
     @State private var selected = 1
     @State var wellbeing : Int = 0
     @Binding var logged : Bool
+    
+    let db = Firestore.firestore()
     let persistentController = PersistenceController.shared
     @FetchRequest(entity: User.entity(),sortDescriptors:[])
     var user: FetchedResults<User>
@@ -147,7 +151,23 @@ struct DailyAssessmentView: View {
                             user[0].lastLogged = Date()
                             user[0].wellbeingLevel = Int32(wellbeing)
                             user[0].minutesGoal = minutesGoal
+                            user[0].achieveNotified = false
+                            user[0].currDayId = UUID()
                             PersistenceController.shared.save()
+                            
+                            if let userid = user[0].uuid?.uuidString {
+                                if let dayId = user[0].currDayId?.uuidString {
+                                    let pathStr = "participants/" + userid + "/days"
+                                    db.collection(pathStr).document(dayId).setData([
+                                        "date" : Date(),
+                                        "adjustedGoal" : minutesGoal,
+                                        "wellbeing" : wellbeing,
+                                        "achieved" : false,
+                                        "exerciseMinutes": 0,
+                                    ])
+                                }
+                            }
+                            
       
                         } label: {
                             Text("Log Wellbeing")
@@ -235,7 +255,6 @@ func scheduleMorningNotification() {
     let notificationContent = UNMutableNotificationContent()
     notificationContent.title = "Time for a wellbeing check-in!"
     notificationContent.body = "Open GoalGetter to log how you're feeling"
-    notificationContent.badge = NSNumber(value: 1)
     
 //    if let url = Bundle.main.url(forResource: "dune",
 //                                withExtension: "png") {

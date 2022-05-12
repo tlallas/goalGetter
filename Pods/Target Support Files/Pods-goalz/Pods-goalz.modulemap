@@ -1,0 +1,6 @@
+framework module Pods_goalz {
+  umbrella header "Pods-goalz-umbrella.h"
+
+  export *
+  module * { export * }
+}

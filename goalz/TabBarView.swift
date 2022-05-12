@@ -10,7 +10,8 @@ import SwiftUI
 struct TabBarView: View {
     @State private var tabSelection = 0
     @Binding var logged : Bool
-    @Binding var minutesGoal : Double 
+    @Binding var minutesGoal : Double
+    @Binding var achieveNotified : Bool
     
     var body: some View {
         TabView(selection: $tabSelection) {
@@ -30,7 +31,7 @@ struct TabBarView: View {
 
             NavigationView {
                 VStack {
-                    GoalView(minutesGoal: $minutesGoal, logged: $logged)
+                    GoalView(minutesGoal: $minutesGoal, logged: $logged, achieveNotified: $achieveNotified)
                     Spacer()
                     Divider()
                 }

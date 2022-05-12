@@ -7,6 +7,7 @@
 
 import SwiftUI
 import PhotosUI
+import Firebase
 
 struct OnboardingView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
@@ -17,6 +18,8 @@ struct OnboardingView: View {
     @State private var id: String = ""
     @State private var goal: String = ""
     @Binding var inOnboarding : Bool
+    
+    let db = Firestore.firestore()
     
     var titles = ["welcome to", "Enter your first name & participant id", "How many minutes do you try to exercise each day?"]
     
@@ -115,7 +118,14 @@ struct OnboardingView: View {
                         newUser.name = name
                         newUser.baselineGoal = Double(goal) ?? 30.0
                         newUser.firstUse = true
+                        newUser.uuid = UUID()
+                        let idStr = newUser.uuid?.uuidString
                         PersistenceController.shared.save()
+                        db.collection("participants").document(idStr ?? UUID().uuidString).setData([
+                            "name": name,
+                            "participantID": id,
+                            "baselineGoal": newUser.baselineGoal
+                        ])
                         inOnboarding = false
                     } else if self.currentPageIndex == 1 {
                         if name != "" && id != "" {

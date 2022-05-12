@@ -7,15 +7,17 @@
 
 import SwiftUI
 import HealthKit
+import Firebase
 
 var minutesDataArray: [HealthDataTypeValue] = []
+
 
 class UserProgress : ObservableObject {
     @Published var minutes = 0.0
     @Published var pct = 0.0
 }
 
-func calcRingFill(_ progress: UserProgress, goal: Double) {
+func calcRingFill(_ progress: UserProgress, goal: Double, achieveNotified: Bool, docPath: String) {
     let exerciseType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.appleExerciseTime)!
     let anchor = createAnchorDate()
     let daily = DateComponents(day: 1)
@@ -25,27 +27,26 @@ func calcRingFill(_ progress: UserProgress, goal: Double) {
     // Set the results handler
     query.initialResultsHandler =  { query, results, error in
         if let statsCollection = results {
-            updateUIFromStatistics(statsCollection, progress, goal: goal)
+            updateUIFromStatistics(statsCollection, progress, goal: goal, achieveNotified: achieveNotified, docPath: docPath)
         }
     }
     query.statisticsUpdateHandler = {
         query, statistics, statisticsCollection, error in
         if let statsCollection = statisticsCollection {
-            updateUIFromStatistics(statsCollection, progress, goal: goal)
+            updateUIFromStatistics(statsCollection, progress, goal: goal, achieveNotified: achieveNotified, docPath: docPath)
         }
-        print(query)
-        print(statistics)
-        print(statisticsCollection)
-        print(error)
+
+
     }
     HealthData.healthStore.execute(query)
 }
 
-func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection, _ progress: UserProgress, goal: Double) {
+func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection, _ progress: UserProgress, goal: Double, achieveNotified: Bool, docPath: String) {
     minutesDataArray = []
     let now = Date()
     let startDate = getLastWeekStartDate()
     let endDate = now
+    let db = Firestore.firestore()
     
     statisticsCollection.enumerateStatistics(from: startDate, to: endDate) { (statistics, stop) in
         var dataValue = HealthDataTypeValue(startDate: statistics.startDate,
@@ -58,12 +59,38 @@ func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection, _ pr
         minutesDataArray.append(dataValue)
     }
     DispatchQueue.main.async {
+        if minutesDataArray.count >= 7 {
         progress.minutes = minutesDataArray[6].value //PROBLEM
         progress.pct = progress.minutes/goal * 100
         
+        let docRef = db.document(docPath)
+        var alreadyAchieved = false
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                alreadyAchieved = document.get("achieved") as! Bool
+                print("Document data: \(alreadyAchieved)")
+            } else {
+                print("Document does not exist")
+            }}
+        
         //check for goal completion to send notification!
-        if (progress.pct >= 100) {
+        if (progress.pct >= 100 && !alreadyAchieved) {
             sendAchievementNotification()
+            
+            //update goal achieved in firebase
+            docRef.updateData([
+                    "achieved": true,
+                    "exerciseMinutes": progress.minutes
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("Document successfully updated")
+                    }
+                }
+        }
+        //Regular update in firebase
+        docRef.updateData([ "exerciseMinutes": progress.minutes])
         }
     }
 }
@@ -72,6 +99,9 @@ struct GoalView: View {
     @Binding var minutesGoal : Double
     @Binding var logged : Bool
     @StateObject var progress = UserProgress()
+    @Binding var achieveNotified : Bool
+    @FetchRequest(entity: User.entity(),sortDescriptors:[])
+    var user: FetchedResults<User>
     
     var body: some View {
         if logged {
@@ -104,8 +134,14 @@ struct GoalView: View {
                 Divider().padding()
                 
             }.onAppear {
-                calcRingFill(progress, goal: minutesGoal)
-                    print(progress.minutes)
+                if !user.isEmpty {
+                    let userId = user[0].uuid?.uuidString ?? ""
+                    let dayId = user[0].currDayId?.uuidString ?? ""
+                    let path = "participants/" + userId + "/days/" + dayId
+                    calcRingFill(progress, goal: minutesGoal, achieveNotified: achieveNotified, docPath: path)
+                        print(progress.minutes)
+                }
+                
                 }
         } else {
             Text("Fill out your daily wellbeing check to get your exercise goal!")
@@ -118,10 +154,10 @@ struct GoalView: View {
 func sendAchievementNotification() {
     let userNotificationCenter = UNUserNotificationCenter.current()
     let notificationContent = UNMutableNotificationContent()
-    notificationContent.title = "Exercise goal achieved!"
-    notificationContent.body = "Way to be a goalgetter :)"
-    notificationContent.badge = NSNumber(value: 3)
-    
+    notificationContent.title = "Exercise goal achieved"
+    notificationContent.body = "Way to be a goalgetter!"
+    notificationContent.sound = .default
+   
 //    if let url = Bundle.main.url(forResource: "dune",
 //                                withExtension: "png") {
 //        if let attachment = try? UNNotificationAttachment(identifier: "dune",
