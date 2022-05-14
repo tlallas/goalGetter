@@ -113,7 +113,7 @@ struct RingView: View {
                     Text(String(Int(self.goal)))
                         .font(.title)
                         .foregroundColor(Color.black.opacity(0.2))
-                } 
+                }
                 
                 
                 // End of ring with drop shadow

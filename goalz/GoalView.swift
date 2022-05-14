@@ -8,14 +8,10 @@
 import SwiftUI
 import HealthKit
 import Firebase
+import WidgetKit
 
 var minutesDataArray: [HealthDataTypeValue] = []
 
-
-class UserProgress : ObservableObject {
-    @Published var minutes = 0.0
-    @Published var pct = 0.0
-}
 
 func calcRingFill(_ progress: UserProgress, goal: Double, achieveNotified: Bool, docPath: String) {
     let exerciseType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.appleExerciseTime)!
@@ -34,6 +30,11 @@ func calcRingFill(_ progress: UserProgress, goal: Double, achieveNotified: Bool,
         query, statistics, statisticsCollection, error in
         if let statsCollection = statisticsCollection {
             updateUIFromStatistics(statsCollection, progress, goal: goal, achieveNotified: achieveNotified, docPath: docPath)
+            
+            let userDefaults = UserDefaults(suiteName: "group.goalzGroup")
+            userDefaults?.setValue(goal, forKey: "goal")
+            userDefaults?.setValue(progress.pct, forKey: "pct")
+            WidgetCenter.shared.reloadAllTimelines()
         }
 
 
@@ -102,6 +103,7 @@ struct GoalView: View {
     @Binding var achieveNotified : Bool
     @FetchRequest(entity: User.entity(),sortDescriptors:[])
     var user: FetchedResults<User>
+    let persistentController = PersistenceController.shared
     
     var body: some View {
         if logged {
@@ -112,18 +114,22 @@ struct GoalView: View {
                 
                 RingView(ringWidth: 15, percent: progress.pct == 0.0 ? 0.1 : progress.pct,
                          backgroundColor: Color.black.opacity(0.2),
-                         foregroundColors: [Color.purple])
+                         foregroundColors: [Color.purple], goal: minutesGoal)
                 .frame(width: 200, height: 200)
                 
                 HStack (alignment: .firstTextBaseline) {
-                    Text(String(Int(minutesGoal)))
+                    Text(String(Int(progress.minutes)))
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.purple)
+                    Text("/")
+                    Text(String(Int(minutesGoal)))
+                        .fontWeight(.regular)
+                        .foregroundColor(Color.black)
                     Text("min")
                 }
                 if progress.pct < 100.0 {
-                    Text(String(Int(minutesGoal - progress.minutes)) + " min to reach your goal for today!")
+                    Text(String(Int(minutesGoal - progress.minutes)) + " more min to reach your goal for today!")
                         .font(.footnote)
                         .foregroundColor(Color.black.opacity(0.4))
                 } else {
@@ -137,11 +143,18 @@ struct GoalView: View {
                 if !user.isEmpty {
                     let userId = user[0].uuid?.uuidString ?? ""
                     let dayId = user[0].currDayId?.uuidString ?? ""
+                    if (userId != "" && dayId != "") {
                     let path = "participants/" + userId + "/days/" + dayId
-                    calcRingFill(progress, goal: minutesGoal, achieveNotified: achieveNotified, docPath: path)
-                        print(progress.minutes)
+                        calcRingFill(progress, goal: minutesGoal, achieveNotified: achieveNotified, docPath: path)
+                        user[0].progressPct = progress.pct
+                        persistentController.save()
+                    }
+                    
                 }
-                
+                let userDefaults = UserDefaults(suiteName: "group.goalzGroup")
+                userDefaults?.setValue(minutesGoal, forKey: "goal")
+                userDefaults?.setValue(progress.pct, forKey: "pct")
+                WidgetCenter.shared.reloadAllTimelines()
                 }
         } else {
             Text("Fill out your daily wellbeing check to get your exercise goal!")

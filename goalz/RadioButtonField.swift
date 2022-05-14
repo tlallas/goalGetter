@@ -48,17 +48,21 @@ struct RadioButtonField: View {
             VStack(alignment: .center) {
                 Text(topLabel)
                     .font(.subheadline)
+                    .foregroundColor(Color.black)
                     .fontWeight(.bold)
                     .padding(.bottom, 5)
                 Image(systemName: self.isMarked ? "largecircle.fill.circle" : "circle")
                     .clipShape(Circle())
+                    .background(Color.white)
                     .foregroundColor(self.bgColor)
                     .padding(.bottom, 2)
                 Text(label)
                     .font(Font.system(size: textSize))
+                    .foregroundColor(Color.black)
                 Spacer()
             }.foregroundColor(self.color)
         }
         .foregroundColor(Color.white)
+        .background(Color.white)
     }
 }

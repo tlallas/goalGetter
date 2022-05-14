@@ -142,7 +142,7 @@ struct DailyAssessmentView: View {
                 
                 WellbeingBlurb(wellbeing: $wellbeing).padding(.bottom, 20)
                 
-                if wellbeing > 0 && logged == false {
+                if wellbeing > 0 && !logged {
                     HStack {
                         Button {
                             tabSelection = 1
@@ -190,12 +190,22 @@ struct DailyAssessmentView: View {
                         }
                     }
                     
-                    wellbeing = Int(user[0].wellbeingLevel)
-                    requestNotificationAuthorization()
-                    scheduleMorningNotification()
+                wellbeing = Int(user[0].wellbeingLevel)
+                if let last = user[0].lastLogged {
+                    logged = getLogged(last: last)
+                }
+                requestNotificationAuthorization()
+                scheduleMorningNotification()
             }
     }
 }
+    
+    func getLogged(last: Date) -> Bool {
+        if Calendar.current.isDateInToday(last) { //already logged today
+            return true
+        }
+        return false
+    }
 
 struct WellbeingBlurb : View {
     @Binding var wellbeing : Int
